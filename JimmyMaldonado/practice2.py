@@ -1,42 +1,45 @@
+# Create 1 script to determine is a number is
+# odd or even (use single line statement if
+# applies).
+
 def is_odd_or_even(number):
-    """Desc"""
+    """Prints if a given number is odd or even"""
+
     if number % 2 == 0: print(number, " is odd")
     else: print(number, "is even")
 
 
-#is_odd_or_even(10)
+is_odd_or_even(10)
 
-#is_odd_or_even(7)
+is_odd_or_even(7)
 
+
+# According a list of values between a Min and
+# Max range, identify if the number is prime or
+# not.
 
 def is_prime(numbers):
-    """Desc"""
+    """Prints if the given numbers are primes or not"""
 
     for number in numbers:
-        print("NUMBER", number)
         divisors = 1
-        for i in range(number):
-            print("DIVISORS", divisors)
-            print("INDEX", i)
-
-            if number == 1:
-                print(number, "is prime")
-
-            elif divisors == 2:
-                if (i + 2) >= number:
-                    print(number, "is prime")
-
-            elif number % (i + 2) == 0:
+        for i in range(1, number):
+            if number % i == 0:
                 divisors += 1
 
+            if (i + 1) == number and divisors == 2:
+                print(number, "is prime")
+                break
             elif divisors > 2:
                 print(number, "is not prime")
+                break
 
 
+numbers_1 = [2, 3, 4, 5, 7, 11, 13, 15, 17, 19, 23, 29]
+is_prime(numbers_1)
 
-
-numbers = [2, 3, 4, 5, 6]
-is_prime(numbers)
+numbers_2 = [5, 8, 20, 31, 33]
+is_prime(numbers_2)
 
 
 
