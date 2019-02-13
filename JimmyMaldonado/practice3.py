@@ -2,8 +2,8 @@
 # radius r only if the radius value is greater of 10.
 
 import math
-from datetime import date
-from time import strptime
+from datetime import datetime, date
+
 
 def area_of_circle(radius):
     """Calculates the area of a circle given a radio greater than 10"""
@@ -58,8 +58,8 @@ def days_in_month(monthName):
     currentYear = date.today().year
     print(currentYear)
     print("%s %s" % (monthName, currentYear))
-    month = strptime(monthName, '%B')
-    month = strptime("%s %s" % (monthName, currentYear), '%B %Y').tm_mon
+    #month = datetime.strptime(monthName, '%B')
+    month = datetime.strptime("%s %s" % (monthName, currentYear), '%B %Y').date()
     print(month)
     #current year
     #month as int
