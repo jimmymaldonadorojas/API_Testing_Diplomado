@@ -3,7 +3,11 @@
 # applies).
 
 def is_odd_or_even(number):
-    """Prints if a given number is odd or even"""
+    """
+    Prints if a given number is odd or even
+    :param number:
+    :return:
+    """
 
     if number % 2 == 0: print(number, " is odd")
     else: print(number, "is even")
@@ -19,7 +23,11 @@ is_odd_or_even(7)
 # not.
 
 def is_prime(numbers):
-    """Prints if the given numbers are primes or not"""
+    """
+    Prints if the given numbers are primes or not
+    :param numbers:
+    :return:
+    """
 
     for number in numbers:
         divisors = 1

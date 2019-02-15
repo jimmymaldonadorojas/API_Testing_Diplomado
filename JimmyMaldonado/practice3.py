@@ -3,10 +3,14 @@
 
 import math
 from datetime import datetime, date
-
+import calendar
 
 def area_of_circle(radius):
-    """Calculates the area of a circle given a radio greater than 10"""
+    """
+    Calculates the area of a circle given a radio greater than 10
+    :param radius:
+    :return:
+    """
 
     if radius > 10:
         area = math.pi * (radius**2)
@@ -26,7 +30,11 @@ area_of_circle(15)
 # n=40 only until sum to 35 need to be returned.
 
 def sum_to(number):
-    """Prints the sum of all integer numbers given a limit"""
+    """
+    Prints the sum of all integer numbers given a limit
+    :param number:
+    :return:
+    """
     sum = 0
     for i in range(1, number + 1):
         if i < 35:
@@ -54,16 +62,19 @@ sum_to(40)
 # return None.
 
 def days_in_month(monthName):
-    """Desc"""
-    currentYear = date.today().year
-    print(currentYear)
-    print("%s %s" % (monthName, currentYear))
-    #month = datetime.strptime(monthName, '%B')
-    month = datetime.strptime("%s %s" % (monthName, currentYear), '%B %Y').date()
-    print(month)
-    #current year
-    #month as int
-    #days in a month
+    """
+    Prints the number of days given the name of a month
+    :param monthName:
+    :return:
+    """
+
+    year = date.today().year
+    month = datetime.strptime(monthName, '%B').month
+    print(calendar.monthrange(year, month)[1])
 
 
 days_in_month('January')
+
+days_in_month('May')
+
+days_in_month('September')
